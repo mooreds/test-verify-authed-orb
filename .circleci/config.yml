@@ -1,12 +1,12 @@
 version: 2.1
 orbs:
-  slack: mooreds/verifyauth@dev:testing
+  verifyauth: mooreds/verifyauth@dev:testing
 jobs:
   build:
     docker:
       - image: "circleci/node:9.6.1"
     steps:
-      - verifyauth:
+      - verifyauth/verifyauth:
           username: "circlecimooreds"
           applicationid: "98113cee-d1a8-4abf-baf5-a6ea742f80a1"
       - run: echo success
