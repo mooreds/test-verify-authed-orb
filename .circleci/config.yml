@@ -6,6 +6,7 @@ jobs:
     docker:
       - image: "circleci/node:9.6.1"
     steps:
+      - run: echo testing that we are authorized
       - verifyauth/verifyauth:
           username: "circlecimooreds"
           applicationid: "98113cee-d1a8-4abf-baf5-a6ea742f80a1"
